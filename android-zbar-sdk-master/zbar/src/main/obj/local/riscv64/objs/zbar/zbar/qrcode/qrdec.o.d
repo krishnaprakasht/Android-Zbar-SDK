@@ -1,0 +1,30 @@
+D:/Projects/android-zbar-sdk-master/android-zbar-sdk-master/android-zbar-sdk-master/zbar/src/main/obj/local/riscv64/objs/zbar/zbar/qrcode/qrdec.o: \
+  D:/Projects/android-zbar-sdk-master/android-zbar-sdk-master/android-zbar-sdk-master/zbar/src/main/jni/zbar/qrcode/qrdec.c \
+  D:/Projects/android-zbar-sdk-master/android-zbar-sdk-master/android-zbar-sdk-master/zbar/src/main/jni/config.h \
+  D:/Projects/android-zbar-sdk-master/android-zbar-sdk-master/android-zbar-sdk-master/zbar/src/main/jni/zbar/qrcode.h \
+  D:/Projects/android-zbar-sdk-master/android-zbar-sdk-master/android-zbar-sdk-master/zbar/src/main/jni/include/zbar.h \
+  D:/Projects/android-zbar-sdk-master/android-zbar-sdk-master/android-zbar-sdk-master/zbar/src/main/jni/zbar/qrcode/qrdec.h \
+  D:/Projects/android-zbar-sdk-master/android-zbar-sdk-master/android-zbar-sdk-master/zbar/src/main/jni/zbar/qrcode/bch15_5.h \
+  D:/Projects/android-zbar-sdk-master/android-zbar-sdk-master/android-zbar-sdk-master/zbar/src/main/jni/zbar/qrcode/rs.h \
+  D:/Projects/android-zbar-sdk-master/android-zbar-sdk-master/android-zbar-sdk-master/zbar/src/main/jni/zbar/qrcode/isaac.h \
+  D:/Projects/android-zbar-sdk-master/android-zbar-sdk-master/android-zbar-sdk-master/zbar/src/main/jni/zbar/qrcode/util.h \
+  D:/Projects/android-zbar-sdk-master/android-zbar-sdk-master/android-zbar-sdk-master/zbar/src/main/jni/zbar/qrcode/binarize.h \
+  D:/Projects/android-zbar-sdk-master/android-zbar-sdk-master/android-zbar-sdk-master/zbar/src/main/jni/zbar/image.h \
+  D:/Projects/android-zbar-sdk-master/android-zbar-sdk-master/android-zbar-sdk-master/zbar/src/main/jni/zbar/error.h \
+  D:/Projects/android-zbar-sdk-master/android-zbar-sdk-master/android-zbar-sdk-master/zbar/src/main/jni/zbar/symbol.h \
+  D:/Projects/android-zbar-sdk-master/android-zbar-sdk-master/android-zbar-sdk-master/zbar/src/main/jni/zbar/refcnt.h \
+  D:/Projects/android-zbar-sdk-master/android-zbar-sdk-master/android-zbar-sdk-master/zbar/src/main/jni/zbar/svg.h
+D:/Projects/android-zbar-sdk-master/android-zbar-sdk-master/android-zbar-sdk-master/zbar/src/main/jni/config.h:
+D:/Projects/android-zbar-sdk-master/android-zbar-sdk-master/android-zbar-sdk-master/zbar/src/main/jni/zbar/qrcode.h:
+D:/Projects/android-zbar-sdk-master/android-zbar-sdk-master/android-zbar-sdk-master/zbar/src/main/jni/include/zbar.h:
+D:/Projects/android-zbar-sdk-master/android-zbar-sdk-master/android-zbar-sdk-master/zbar/src/main/jni/zbar/qrcode/qrdec.h:
+D:/Projects/android-zbar-sdk-master/android-zbar-sdk-master/android-zbar-sdk-master/zbar/src/main/jni/zbar/qrcode/bch15_5.h:
+D:/Projects/android-zbar-sdk-master/android-zbar-sdk-master/android-zbar-sdk-master/zbar/src/main/jni/zbar/qrcode/rs.h:
+D:/Projects/android-zbar-sdk-master/android-zbar-sdk-master/android-zbar-sdk-master/zbar/src/main/jni/zbar/qrcode/isaac.h:
+D:/Projects/android-zbar-sdk-master/android-zbar-sdk-master/android-zbar-sdk-master/zbar/src/main/jni/zbar/qrcode/util.h:
+D:/Projects/android-zbar-sdk-master/android-zbar-sdk-master/android-zbar-sdk-master/zbar/src/main/jni/zbar/qrcode/binarize.h:
+D:/Projects/android-zbar-sdk-master/android-zbar-sdk-master/android-zbar-sdk-master/zbar/src/main/jni/zbar/image.h:
+D:/Projects/android-zbar-sdk-master/android-zbar-sdk-master/android-zbar-sdk-master/zbar/src/main/jni/zbar/error.h:
+D:/Projects/android-zbar-sdk-master/android-zbar-sdk-master/android-zbar-sdk-master/zbar/src/main/jni/zbar/symbol.h:
+D:/Projects/android-zbar-sdk-master/android-zbar-sdk-master/android-zbar-sdk-master/zbar/src/main/jni/zbar/refcnt.h:
+D:/Projects/android-zbar-sdk-master/android-zbar-sdk-master/android-zbar-sdk-master/zbar/src/main/jni/zbar/svg.h:

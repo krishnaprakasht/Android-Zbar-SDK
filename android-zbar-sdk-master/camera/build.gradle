@@ -1,0 +1,45 @@
+apply plugin: rootProject.ext.plugins.library
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.libraryMinSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+    }
+
+    compileOptions {
+        sourceCompatibility =17
+        targetCompatibility =17
+    }
+//
+    namespace  "com.bluebird.zbar.camera"
+    resourcePrefix 'zbar_'
+    ndkVersion '28.0.12674087'
+    sourceSets {
+        main {
+            manifest.srcFile 'src/main/AndroidManifest.xml'
+            java.srcDirs = ['src/main/java']
+            res.srcDirs = ['src/main/res']
+            aidl.srcDirs = ['src/main/aidl']
+            assets.srcDirs = ['src/main/assets']
+            jni.srcDirs = ['src/main/jni']
+            jniLibs.srcDirs = ['src/main/jniLibs']
+            resources.srcDirs = ['src/main/resources']
+            renderscript.srcDirs = ['src/main/rs']
+        }
+    }
+    lint {
+        abortOnError false
+    }
+    buildToolsVersion '28.0.3'
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+//    implementation rootProject.ext.dependencies.zbar
+    implementation project(':zbar')
+    implementation 'com.google.ar:core:1.47.0'
+    implementation 'com.google.mlkit:barcode-scanning:16.0.3'
+    implementation 'androidx.camera:camera-core:1.4.1'
+}

@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:clickable="true"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.bluebird.zbar.sample.PreviewHolderFragment">
+
+
+    <com.bluebird.zbar.camera.CameraPreview
+        android:id="@+id/capture_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </com.bluebird.zbar.camera.CameraPreview>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/result_list"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:background="@drawable/rounded_top_bg"
+            app:layout_constraintBottom_toTopOf="@+id/resultView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+            <View
+                android:id="@+id/lineView"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginHorizontal="50dp"
+                android:background="#CCCCCC"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/itemContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="true"
+                android:padding="10dp" />
+
+        </LinearLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/resultView"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@color/black"
+            android:padding="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ToggleButton
+                android:id="@+id/capture_restart_scan"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/circle_shape"
+                android:textOn=""
+                android:textOff=""
+                android:backgroundTint="@color/toggle_tint_preview"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ToggleButton
+                android:id="@+id/startStopToggle"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:background="@drawable/circle_shape"
+                android:backgroundTint="@color/toggle_tint_preview"
+                android:elevation="4dp"
+                android:textOff=""
+                android:textOn=""
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <ImageView
+                android:id="@+id/multiple_scans_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="25dp"
+                android:src="@drawable/multiple_scans"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/multiple_scans_count"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:background="@drawable/circle_blue"
+                android:text="5"
+                android:visibility="gone"
+                android:textColor="@android:color/white"
+                android:textSize="10sp"
+                android:gravity="center"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="@id/multiple_scans_icon"
+                app:layout_constraintEnd_toEndOf="@id/multiple_scans_icon"
+                android:layout_marginEnd="-5dp"
+                android:layout_marginTop="-5dp"/>
+
+<!--            <TextView-->
+<!--                android:id="@+id/mode"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginHorizontal="12dp"-->
+<!--                android:text=""-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="14sp"-->
+<!--                android:textStyle="bold"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/barcodeId"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginHorizontal="15dp"-->
+<!--                android:layout_marginTop="6dp"-->
+<!--                android:text="Data :"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="12dp"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/mode" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/totalTime"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginHorizontal="15dp"-->
+<!--                android:layout_marginTop="6dp"-->
+<!--                android:text="Total Time :"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="12dp"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/barcodeId" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/count"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginHorizontal="15dp"-->
+<!--                android:layout_marginTop="6dp"-->
+<!--                android:text="Count"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="12dp"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/totalTime" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/symbology"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginHorizontal="15dp"-->
+<!--                android:layout_marginTop="6dp"-->
+<!--                android:text="Symbology:"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="12dp"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/count" />-->
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--        <Button-->
+<!--            android:id="@+id/capture_restart_scan"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:gravity="center"-->
+<!--            android:text="Restart"-->
+<!--            android:layout_marginEnd="20dp"-->
+<!--            android:textSize="12sp"-->
+<!--            android:visibility="invisible"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/resultView"-->
+<!--            app:layout_constraintEnd_toEndOf="@+id/resultView"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/resultView" />-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--        android:id="@+id/capture_crop_view"-->
+<!--        android:layout_width="250dp"-->
+<!--        android:layout_height="250dp"-->
+<!--        android:layout_marginBottom="80dp"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
+
+
+<!--        <ImageView-->
+<!--            android:layout_width="70dp"-->
+<!--            android:layout_height="70dp"-->
+<!--            android:scaleType="fitXY"-->
+<!--            android:src="@drawable/add_scan"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/capture_mask_top"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_above="@id/capture_crop_view"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:background="@drawable/qr_scan_shadow"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/capture_mask_left"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/capture_preview"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/capture_crop_view"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <ImageButton
+        android:id="@+id/switch_flashlight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:adjustViewBounds="true"
+        android:background="@null"
+        android:padding="14dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:scaleType="centerInside"
+        app:layout_constraintTop_toBottomOf="@+id/bottomNavigationView"
+        android:src="@drawable/ic_flash_off_white_36dp"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageViewTarget"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:layout_margin="5dp"
+        android:layout_gravity="end"
+        android:adjustViewBounds="true"
+        android:background="@null"
+        android:scaleType="centerCrop"
+        android:src="@drawable/target"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bottomNavigationView" />
+
+<!--    <ImageView-->
+<!--        android:id="@+id/capture_mask_right"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:layout_toEndOf="@id/capture_crop_view"-->
+<!--        android:layout_toRightOf="@id/capture_crop_view"-->
+<!--        android:background="@drawable/qr_scan_shadow"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/capture_mask_left"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/capture_crop_view"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@null"
+        android:elevation="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tabIndicatorFullWidth="false"
+        app:tabSelectedTextColor="@color/brightblue"
+        app:tabTextColor="@color/white">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="single Scan" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Continuous Scan"
+            android:textSize="14sp" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <com.bluebird.zbar.camera.OverlayView
+        android:id="@+id/overlay_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.bluebird.zbar.camera.OverlayViewBounded
+        android:id="@+id/overlay_view_bounded"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

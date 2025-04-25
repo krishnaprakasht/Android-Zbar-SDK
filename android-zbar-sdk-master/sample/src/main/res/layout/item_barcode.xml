@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent">
+    <View
+        android:id="@+id/topBorder1"
+        android:layout_width="match_parent"
+        android:layout_height="1.2dp"
+        android:background="@color/black" />
+    <View
+        android:id="@+id/topBorder2"
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:layout_marginHorizontal="10dp"
+        android:background="@color/lightGrey" />
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="20dp"
+    android:paddingVertical="10dp">
+
+
+    <TextView
+        android:id="@+id/textViewBarcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Barcode"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewMode"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingStart="6dp"
+        android:paddingTop="2.5dp"
+        android:text="mode"
+        android:gravity="start"
+        android:textColor="@color/grey"
+        android:textSize="11sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewBarcode"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewSymbolLabel"
+        android:layout_width="45dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:paddingTop="4dp"
+        android:text="Symbol  "
+        android:textColor="@color/brightblue"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBarcode" />
+
+    <TextView
+        android:id="@+id/textViewSymbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="4dp"
+        android:text="Symbol"
+        android:layout_marginTop="2dp"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/textViewSymbolLabel"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBarcode" />
+
+    <TextView
+        android:id="@+id/textViewCountLabel"
+        android:layout_width="45dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:paddingTop="4dp"
+        android:text="Count  "
+        android:textColor="@color/brightblue"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSymbolLabel" />
+
+    <TextView
+        android:id="@+id/textViewCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="4dp"
+        android:layout_marginTop="2dp"
+        android:text="Cnt"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/textViewCountLabel"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSymbol" />
+
+    <TextView
+        android:id="@+id/textViewDataTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Data Time"
+        android:textColor="@color/black"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

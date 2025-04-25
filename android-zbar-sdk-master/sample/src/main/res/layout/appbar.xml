@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    android:background="@color/primaryblue">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:layout_marginRight="7dp"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/vertical_bar" />
+
+    <TextView
+        android:id="@+id/titleAppBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:textColor="@color/white"
+        android:text="BOS™ Barcode Scanner"
+        android:textSize="22sp" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="37dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="15dp"
+        android:layout_gravity="end|center_vertical"
+        android:src="@drawable/logo_img" />
+
+</androidx.appcompat.widget.Toolbar>
